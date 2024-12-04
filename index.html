@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Rating System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback & Rating System</h1>
+        <form id="feedback-form">
+            <label for="user-name">Enter your name</label>
+            <input type="text" id="user-name" placeholder="Enter your name" required>
+            
+            <label for="stars">Rate us</label>
+            <div class="stars" id="stars">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
+
+            <label for="feedback">Enter your feedback</label>
+            <textarea id="feedback" placeholder="Enter your feedback here" required></textarea>
+
+            <label for="emoji-reaction">Reaction</label>
+            <div class="emoji-reactions">
+                <select id="emoji-reaction">
+                    <option value="" selected disabled>Select a reaction</option>
+                    <option value="👍">👍 Thumbs Up</option>
+                    <option value="👎">👎 Thumbs Down</option>
+                    <option value="❤️">❤️ Heart</option>
+                    <option value="😂">😂 Laugh</option>
+                    <option value="😮">😮 Surprise</option>
+                </select>
+            </div>
+
+            <button type="button" id="submit-feedback">Submit</button>
+        </form>
+        <div id="feedback-result"></div>
+        <div id="average-rating"></div>
+    </div>
+    <audio id="feedback-song" src="song.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
